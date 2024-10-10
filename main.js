@@ -1,8 +1,8 @@
-import './style.css'
+// import './style.css'
 
 
 // 1.INTRODUCCIÓN
-// ejercicio 1
+// ejercicio 1.1
 const ejercicioIntro1 = () => {
     let a = 5;
     let b = 8;
@@ -16,7 +16,7 @@ buttonIntro1.addEventListener('click', () => {
     ejercicioIntro1();
 });
 
-// ejercicio 2
+// ejercicio 1.2
 const ejercicioIntro2 = () => {
     let input = prompt('¿Cuál es tu nombre?');
     console.log('Buen día ' + input + '.');
@@ -29,7 +29,7 @@ buttonIntro2.addEventListener('click', () => {
 });
 
 // 2.OPERADORES LÓGICOS Y CONDICIONALES
-// ejercicio 1
+// ejercicio 2.1
 const ejercicioOperadores1 = () => {
     let a = 10;
     let b = 43;
@@ -48,7 +48,7 @@ buttonOperadores1.addEventListener('click', () => {
     ejercicioOperadores1();
 });
 
-//ejercicio 2
+//ejercicio 2.2
 const ejercicioOperadores2 = () => {
     let a = prompt('Ingrese un número: ');
     if (a % 2 == 0) {
@@ -65,7 +65,7 @@ buttonOperadores2.addEventListener('click', () => {
 });
 
 // 3.OPERADORES DE ASIGNACIÓN Y BUCLES
-// ejercicio 1
+// ejercicio 3.1
 const ejercicioBucles1 = () => {
     let a = 10;
     while (a > 0) {
@@ -80,6 +80,7 @@ buttonBucles1.addEventListener('click', () => {
     ejercicioBucles1();
 });
 
+// ejercicio 3.2
 const ejercicioBucles2 = () => {
     let a;
     do {
@@ -95,7 +96,7 @@ buttonBucles2.addEventListener('click', () => {
 });
 
 // 4.FUNCIONES
-// ejercicio 1
+// ejercicio 4.1
 const esPar = (a) => {
     if (a % 2 == 0) {
         return true;
@@ -110,7 +111,7 @@ buttonFuncion1.addEventListener('click', () => {
     console.log(esPar(40), esPar(21), esPar(4));
 });
 
-// ejercicio 2
+// ejercicio 4.2
 const convertirCelsiusAFahrenheit = (celcius) => {
     return celcius * 1.8 + 32;
 };
@@ -123,7 +124,7 @@ buttonFuncion2.addEventListener('click', () => {
 });
 
 // 5. OBJETOS
-// ejercicio 1
+// ejercicio 5.1
 const persona = {
     nombre: 'Rodrigo',
     edad: 25,
@@ -133,7 +134,7 @@ const persona = {
     }
 };
 
-let buttonObjeto1 = document.getElementById('button-objeto-1');
+let buttonObjeto1 = document.querySelector('#button-objeto-1');
 
 buttonObjeto1.addEventListener('click', () => {
     console.log(persona);
@@ -141,13 +142,13 @@ buttonObjeto1.addEventListener('click', () => {
     console.log(persona);
 });
 
-// ejercicio 2
+// ejercicio 5.2
 const libro = {
     titulo: 'Código Limpio',
     autor: 'Robert C. Martin',
     año: 2012,
-    esAntiguo: () => {
-        if (año > 10) 
+    esAntiguo: function() {
+        if (new Date().getFullYear() - this.año > 10) 
             return true;
         else return false;
     }
@@ -156,5 +157,113 @@ const libro = {
 let buttonObjeto2 = document.getElementById('button-objeto-2');
 
 buttonObjeto2.addEventListener('click', () => {
-    console.log('El libro tiene más de 10 años? ', );
+    console.log('El libro "' + libro.titulo + '" tiene más de 10 años: ' + libro.esAntiguo());
 });
+
+// 6. ARRAYS
+// ejercicio 6.1
+let numeros = [1,2,3,4,5,6,7,8,9,10];
+let nuevosNumeros = [];
+let buttonArray1 = document.querySelector('#button-array-1');
+
+buttonArray1.addEventListener('click', () => {
+    console.log("Números originales: " + numeros);
+    numeros.forEach( (n) => nuevosNumeros.push(n*2));
+    console.log("Números multiplicados por 2: " + nuevosNumeros);
+
+});
+
+// ejercicio 6.2
+let pares = [];
+
+let buttonArray2 = document.querySelector('#button-array-2');
+
+buttonArray2.addEventListener('click', () => {
+    let counter = 0;
+    for (let n=1; n<=20; n++) {
+        if (n % 2 == 0 && counter < 10) {
+            pares.push(n);
+            counter++;
+        }
+    }
+    console.log("Primeros 10 números pares: " + pares);
+});
+
+// 7.Introducción al DOM
+// ejercicio 7.1
+
+let buttonDomCambiarColor = document.querySelector('#button-dom-cambiar-color');
+buttonDomCambiarColor.addEventListener('click', () => {
+    const parrafos = document.querySelectorAll('#parrafos-dom p');
+    parrafos.forEach(p => {
+        p.style.color = 'blue';
+    })
+});
+
+// ejercicio 7.2
+
+let buttonDomMostrarAlerta = document.querySelector('#button-dom-mostrar-alerta');
+buttonDomMostrarAlerta.addEventListener('click', () => {
+    event.preventDefault();
+    const texto = document.querySelector('#formulario-dom #input-texto').value;
+    alert("Has ingresado: " + texto);
+    document.querySelector('#formulario-dom #texto').value = "";
+});
+
+
+// 8.Eventos en DOM
+// ejercicio 8.1
+
+let listItemDom1 = document.querySelector('#list-item-dom-1');
+listItemDom1.addEventListener('click', () => {
+    console.log(listItemDom1.textContent);
+});
+let listItemDom2 = document.querySelector('#list-item-dom-2');
+listItemDom2.addEventListener('click', () => {
+    console.log(listItemDom2.textContent);
+});
+let listItemDom3 = document.querySelector('#list-item-dom-3');
+listItemDom3.addEventListener('click', () => {
+    console.log(listItemDom3.textContent);
+});
+let listItemDom4 = document.querySelector('#list-item-dom-4');
+listItemDom4.addEventListener('click', () => {
+    console.log(listItemDom4.textContent);
+});
+
+// ejercicio 8.2
+let buttonDeshabilitarInput = document.querySelector('#button-deshabilitar-input');
+buttonDeshabilitarInput.addEventListener('click', () => {
+    document.querySelector('#input-eventos-dom').disabled = true;
+});
+let buttonHabilitarInput = document.querySelector('#button-habilitar-input');
+buttonHabilitarInput.addEventListener('click', () => {
+    document.querySelector('#input-eventos-dom').disabled = false;
+});
+
+
+// 9.LocalStorage
+// ejercicio 9.1
+
+
+const actualizarLabelCorreo = () => {
+    document.querySelector("#label-correo-localstorage").textContent = JSON.parse(localStorage.getItem("correo"));
+};
+
+actualizarLabelCorreo();
+
+let buttonGuardarCorreo = document.querySelector('#button-guardar-correo');
+buttonGuardarCorreo.addEventListener('click', () => {
+    const correo = document.querySelector('#input-email-localstorage');
+    localStorage.setItem("correo", JSON.stringify(correo.value));
+    actualizarLabelCorreo();
+});
+
+let buttonEliminarCorreo = document.querySelector('#button-eliminar-correo');
+buttonEliminarCorreo.addEventListener('click', () => {
+    localStorage.clear();
+    actualizarLabelCorreo();
+});
+
+
+
