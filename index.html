@@ -4,77 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trabajo Práctico JavaScript</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <head>
+    <header>
         <h1>Trabajo Práctico JavaScript</h1>
-    </head>
+    </header>
     <main>
+
+        <section id="inicio">
+            <h2>Índice</h2>
+            <nav>
+                <ol>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#operadores">Operadores lógicos y condicionales</a></li>
+                    <li><a href="#bucles">Operadores de asignación y bucles</a></li>
+                    <li><a href="#funciones">Funciones</a></li>
+                    <li><a href="#objetos">Objetos</a></li>
+                    <li><a href="#arrays">Arrays</a></li>
+                    <li><a href="#intro-dom">Introducción al DOM</a></li>
+                    <li><a href="#eventos-dom">Eventos en DOM</a></li>
+                    <li><a href="#localstorage">LocalStorage</a></li>
+                </ol>
+            </nav>
+
+        </section>
 
         <section id="introduccion">
             <h2>1. Introducción a Javascript. </h2>
             <div>
-                <button id="button-intro-1">Ejercicio 1</button>
+                <h3>Ejercicio 1.1: Suma de variables</h3>
+                <button id="button-intro-1">Sumar</button>
             </div>
 
             <div>
-                <button id="button-intro-2">Ejercicio 2</button>
+                <h3>Ejercicio 1.2: Ingresar y mostrar nombre</h3>
+                <button id="button-intro-2">Ingresar nombre</button>
             </div>
         </section>
+
+        <hr>
 
         <section id="operadores">
             <h2>2. Operadores lógicos y condicionales. </h2>
             <div>
-                <button id="button-operadores-1">Ejercicio 1</button>
+                <h3>Ejercicio 2.1: Número mayor</h3>
+                <button id="button-operadores-1">Comparar</button>
             </div>
             <div>
-                <button id="button-operadores-2">Ejercicio 2</button>
+                <h3>Ejercicio 2.2: Par o impar</h3>
+                <button id="button-operadores-2">Ingresar número</button>
             </div>
         </section>
 
-        <section id="bucles"></section>
+        <hr>
+
+        <section id="bucles">
             <h2>3. Operadores de asignación y bucles. </h2>
             <div>
-                <button id="button-bucles-1">Ejercicio 1</button>
+                <h3>Ejercicio 3.1: Bucle while</h3>
+                <button id="button-bucles-1">Generar bucle</button>
             </div>
             <div>
-                <button id="button-bucles-2">Ejercicio 2</button>
+                <h3>Ejercicio 3.2: Comprobar número mayor que 100</h3>
+                <button id="button-bucles-2">Comprobar</button>
             </div>
         </section>
 
-        <section>
+        <hr>
+
+        <section id="funciones">
             <h2>4. Funciones.</h2>
             <div>
-                <button id="button-funcion-1">Ejercicio 1</button>
+                <h3>Ejercicio 4.1: Función esPar</h3>
+                <button id="button-funcion-1">Comprobar</button>
             </div>
             <div>
-                <button id="button-funcion-2">Ejercicio 2</button>
+                <h3>Ejercicio 4.2: Conversor °C a °F</h3>
+                <button id="button-funcion-2">Convertir</button>
             </div>
         </section>
 
-        <section>
+        <hr>
+
+        <section id="objetos">
             <h2>5. Objetos</h2>
             <div>
-                <button id="button-objeto-1">Ejercicio 1</button>
+                <h3>Ejercicio 5.1: Objeto persona</h3>
+                <button id="button-objeto-1">Mostrar</button>
             </div>
             <div>
-                <button id="button-objeto-2">Ejercicio 2</button>
+                <h3>Ejercicio 5.2: Objeto libro</h3>
+                <button id="button-objeto-2">Mostrar</button>
             </div>
         </section>
 
-        <section>
+        <hr>
+
+        <section id="arrays">
             <h2>6. Arrays</h2>
             <div>
-                <button id="button-array-1">Ejercicio 1</button>
+                <h3>Ejercicio 6.1: Multiplicar array de números</h3>
+                <button id="button-array-1">Multiplicar</button>
             </div>
             <div>
-                <button id="button-array-2">Ejercicio 2</button>
+                <h3>Ejercicio 6.2: Array de números pares</h3>
+                <button id="button-array-2">Mostrar</button>
             </div>
         </section>
 
-        <section>
+        <hr>
+
+        <section id="intro-dom">
             <h2>7. Introducción al DOM</h2>
             <div>
+                <h3>Ejercicio 7.1: Cambiar color de los párrafos</h3>
                 <div id="parrafos-dom">
                     <p>Primer párrafo.</p>
                     <p>Segundo párrafo.</p>
@@ -83,19 +127,22 @@
                 <button id="button-dom-cambiar-color">Cambiar color a azul</button>
             </div>
             <div>
+                <h3>Ejercicio 7.2: Formulario con alerta</h3>
                 <form id="formulario-dom">
                     <div>
                         <label>Ingresa un texto: </label>
                         <input id="input-texto" type="text" name="texto" placeholder="Ingresar un texto">
                     </div>
                     <div>
-                        <button id="button-dom-mostrar-alerta" type="submit">Mostrar alerta</button>
+                        <button id="button-dom-mostrar-alerta" type="button">Mostrar alerta</button>
                     </div>
                 </form>
             </div>
         </section>
 
-        <section>
+        <hr>
+
+        <section id="eventos-dom">
             <h2>8. Eventos en DOM</h2>
             <div>
                 <h3>Ejercicio 8.1: Lista con elementos</h3>
@@ -118,9 +165,12 @@
 
         </section>
 
-        <section>
+        <hr>
+
+        <section id="localstorage">
             <h2>9. LocalStorage</h2>
             <div>
+                <h3>Ejercicio 9.2: Formulario con LocalStorage</h3>
                 <form>
                     <div>
                         <label>Correo electrónico:</label>
@@ -137,7 +187,24 @@
 
         </section>
 
+        
+
     </main>
-    <script type="module" src="/main.js"></script>
+
+    <footer>
+        <div>
+            <p>Vargas Rodrigo 47805</p>
+            <p>Desarrollo de software 2024</p>
+            <p>Comisión 3k10</p>
+        </div>
+        
+        <div>
+            <a href="#inicio">Volver al inicio</a>
+        </div>
+    </footer>
+
+    <script type="module" src="/parte-uno.js"></script>
+    <script type="module" src="/parte-dos.js"></script>
+    <script type="module" src="/parte-tres.js"></script>
   </body>
 </html>
